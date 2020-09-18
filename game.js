@@ -22,3 +22,19 @@ let config = {
         update : update,
     }
 };
+
+//creating a game object using phaser game class
+
+let game = new Phaser.Game(config);
+
+function preload(){
+    console.log("preload");
+    
+    //Using a load object we load a image
+     this.load.image('background','../Assets/back.png');
+    //console.log(this);
+    
+    this.load.image('wheel','../Assets/wheel.png');
+    this.load.image('pin','../Assets/pin.png');
+    this.load.image('stand','../Assets/stand.png');
+}
