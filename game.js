@@ -38,3 +38,43 @@ function preload(){
     this.load.image('pin','../Assets/pin.png');
     this.load.image('stand','../Assets/stand.png');
 }
+
+function create(){
+    console.log("create");
+    
+    //create the background image
+    let W = game.config.width ;
+    let H = game.config.height ;
+    
+    let background=this.add.sprite(0,0,'background');
+    background.setPosition(W/2,H/2);
+    background.setScale(3.5);
+    
+    
+    //let's create a stand
+    let stand=this.add.sprite(0,0,'stand');
+    stand.setPosition(W/2,H/2 +100);
+    stand.setScale(0.8);
+    
+    //let's create a wheel
+    this.wheel=this.add.sprite(0,0,'wheel');
+    this.wheel.setPosition(W/2,H/2);
+    this.wheel.setScale(0.6);
+    
+    //let's create a pin
+    let pin=this.add.sprite(0,0,'pin');
+    pin.setPosition(W/2,H/3.2);
+    pin.setScale(0.8);
+    
+    //event listener for mouse click
+    this.input.on("pointerdown",spinwheel,this);
+    
+    //lets create a text object
+    
+    font_style = {
+        font :"bold 30px Arial",
+        align: "center",
+        color:"red",
+    }
+    this.game_text = this.add.text(10,10,"Welcome to spin and win game",font_style)
+}
