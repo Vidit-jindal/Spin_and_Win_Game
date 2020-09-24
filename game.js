@@ -1,7 +1,7 @@
 //Hello World of Phaser = Basic Game = Single scene in Spin and Win game
 //How to create a basic skeleton for the game -> Game loop.
 //creating a config object .
-
+    
 
 
 let prizes_config = {
